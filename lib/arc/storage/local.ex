@@ -16,8 +16,6 @@ defmodule Arc.Storage.Local do
   def url(definition, version, file_and_scope, _options \\ []) do
     local_path = build_local_path(definition, version, file_and_scope)
     host = host()
-    IO.inspect(host)
-    IO.inspect(local_path)
     url =
       if host == "" do
         Path.join "/", local_path
